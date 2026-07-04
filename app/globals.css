@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-navy font-inter;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 md:px-16 lg:px-24;
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, #C9A84C 0%, #dfc070 50%, #C9A84C 100%);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #C9A84C, #dfc070);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Linen / woven fabric texture for cream sections */
+  .bg-linen {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(160, 120, 50, 0.028) 3px,
+        rgba(160, 120, 50, 0.028) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(160, 120, 50, 0.028) 3px,
+        rgba(160, 120, 50, 0.028) 4px
+      );
+  }
+
+  /* Hang-tag style section eyebrow labels */
+  .tag-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.625rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 3px 9px 3px 7px;
+    border: 1px solid rgba(201, 168, 76, 0.28);
+    border-radius: 2px;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  .tag-label::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0.55;
+    flex-shrink: 0;
+  }
+}
